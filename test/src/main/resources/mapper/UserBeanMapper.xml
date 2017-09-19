@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xhhy.dao.UserBeanMapper">
-  <resultMap id="BaseResultMap" type="com.xhhy.bean.UserBean">
+<mapper namespace="com.xhhy.dao.UserDao">
+  <resultMap id="myUser" type="com.xhhy.bean.UserBean">
     <id column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="loginname" jdbcType="VARCHAR" property="loginname" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -19,4 +19,8 @@
     <result column="addtime" jdbcType="DATE" property="addtime" javaType="STRING" />
     <result column="del" jdbcType="INTEGER" property="del" />
   </resultMap>
+  <select id="login" resultMap="myUser" >
+  	select user_id,loginname,password,user_name,sex,id_card,mobilephone,email
+  	from user_tb where loginname = #{ln} and password = #{ps}
+  </select>
 </mapper>

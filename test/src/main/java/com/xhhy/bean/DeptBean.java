@@ -1,6 +1,5 @@
 package com.xhhy.bean;
 
-import java.util.Date;
 
 public class DeptBean {
     private Integer deptId;

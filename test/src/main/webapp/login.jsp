@@ -133,7 +133,7 @@
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
-					<form action="LoginServlet.do" method="post"
+					<form action="login" method="post"
 						class="form-horizontal" id="myForm">
 						<div class="login-input form-group ">
 							<label
@@ -141,7 +141,7 @@
 							<div
 								class="col-md-3 col-md-offset-0 col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0">
 								<input type="text" class="form-control img-responsive" id="ln"
-									onblur="checkLogin()" name="loginname" value="" />
+									onblur="checkLogin()" name="loginName" value="" />
 								<%--${cookie.loginname.value} --%>
 							</div>
 							<div
