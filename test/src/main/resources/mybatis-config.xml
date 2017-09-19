@@ -4,7 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<settings>
-		<setting name="jdbcTypeForNull" value="NULL"/><!-- 操作Oracle数据库时设置 -->
-		<setting name="mapUnderscoreToCamelCase" value="true"/> <!-- 驼峰命名的自动匹配 -->
+		<setting name="jdbcTypeForNull" value="NULL" /><!-- 操作Oracle数据库时设置 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" /> <!-- 驼峰命名的自动匹配 -->
+		<setting value="true" name="cacheEnabled" />
 	</settings>
 </configuration>
