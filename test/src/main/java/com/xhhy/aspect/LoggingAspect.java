@@ -32,14 +32,14 @@ public class LoggingAspect {
 		String className = jp.getTarget().getClass().getName();
 		log.warn(className + "类的"+methodName+"方法执行完毕...");
 	}
-	@AfterReturning("expre()")
+	@AfterReturning(value="expre()",returning="result")
 	public void afterReturning(JoinPoint jp,Object result){
 		String methodName = jp.getSignature().getName();
 		String className = jp.getTarget().getClass().getName();
 		log.warn(className + "类的"+methodName+"方法没有发生异常...处理结果是"+result);
 	}
 	
-	@AfterThrowing("expre()")
+	@AfterThrowing(value="expre()",throwing="e")
 	public void afterThrowing(JoinPoint jp,Exception e){
 		String methodName = jp.getSignature().getName();
 		String className = jp.getTarget().getClass().getName();

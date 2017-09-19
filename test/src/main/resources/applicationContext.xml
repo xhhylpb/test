@@ -12,9 +12,7 @@
 
 
 	<!-- 注解扫描器 -->
-	<context:component-scan base-package="com.xhhy.service"></context:component-scan>
-	<context:component-scan base-package="com.xhhy.dao"></context:component-scan>
-	<context:component-scan base-package="com.xhhy.controller"></context:component-scan>
+	<context:component-scan base-package="com.xhhy.*"></context:component-scan>
 	<!--mvc的两个基本配置 -->
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven></mvc:annotation-driven>
