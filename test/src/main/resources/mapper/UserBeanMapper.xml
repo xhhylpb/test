@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xhhy.dao.UserBeanMapper">
+  <resultMap id="BaseResultMap" type="com.xhhy.bean.UserBean">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="loginname" jdbcType="VARCHAR" property="loginname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="mobilephone" jdbcType="CHAR" property="mobilephone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="dept_id" jdbcType="INTEGER" property="deptId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="addtime" jdbcType="DATE" property="addtime" javaType="STRING" />
+    <result column="del" jdbcType="INTEGER" property="del" />
+  </resultMap>
+</mapper>
