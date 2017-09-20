@@ -1,7 +1,8 @@
 package com.xhhy.bean;
 
+import java.io.Serializable;
 
-public class RoleBean {
+public class RoleBean implements Serializable {
     private Integer roleId;
 
     private String roleName;

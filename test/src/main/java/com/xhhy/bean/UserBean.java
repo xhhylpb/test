@@ -1,7 +1,8 @@
 package com.xhhy.bean;
 
+import java.io.Serializable;
 
-public class UserBean {
+public class UserBean implements Serializable {
     private Integer userId;
 
     private String loginname;

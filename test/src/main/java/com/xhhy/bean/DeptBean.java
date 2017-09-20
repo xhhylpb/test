@@ -1,7 +1,8 @@
 package com.xhhy.bean;
 
+import java.io.Serializable;
 
-public class DeptBean {
+public class DeptBean implements Serializable{
     private Integer deptId;
 
     private String deptName;
