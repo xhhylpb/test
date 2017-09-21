@@ -14,6 +14,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+	<import resource="spring-quartz.xml"/>
 
 	<!-- 注解扫描器 -->
 	<context:component-scan base-package="com.xhhy.*"></context:component-scan>
@@ -121,6 +122,7 @@
 		</property>
 	</bean>
 
+
 	<!-- 上传文件的配置 -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -155,4 +157,13 @@
 		<property name="configLocation" value="classpath:ehcache.xml" />
 		<property name="shared" value="true" />
 	</bean>
+
+	<mvc:interceptors>
+		<!-- 配置了拦截器，对所有的 控制器都会起到拦截作用 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<!-- 配置不做拦截的路径 -->
+			<bean class="com.xhhy.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

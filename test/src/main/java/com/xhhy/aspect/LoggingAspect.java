@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LoggingAspect {
-	private static Logger log = Logger.getLogger(LoggingAspect.class);
+	private Logger log = Logger.getLogger(LoggingAspect.class);
 	
 	@Pointcut("execution(* com.xhhy.dao.*.*(..))")
 	public void expre(){}
@@ -22,7 +22,6 @@ public class LoggingAspect {
 	public void beforeMethod(JoinPoint jp){
 		String methodName =  jp.getSignature().getName();
 		String className = jp.getTarget().getClass().getName();
-		System.out.println("nihao");
 		log.warn(className + "类的"+methodName+"方法开始执行...");
 	}
 	

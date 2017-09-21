@@ -65,7 +65,7 @@
 		var ps = document.getElementById("ps");
 		if (ps.value == null || ps.value == "") {
 			document.getElementById("lp").innerHTML = "密码不能为空!";
-			ps.focus;
+			ps.focus();
 			return false;
 		} else {
 			document.getElementById("lp").innerHTML = "";
@@ -117,7 +117,7 @@
 	}
 	function changeImg() {
 		var time = new Date();
-		document.getElementById("vf").src = "number.jpg?time=" + time.getTime();
+		/* document.getElementById("vf").src = "number.jpg?time=" + time.getTime(); */
 	}
 </script>
 </head>
@@ -173,11 +173,11 @@
 							<div
 								class="col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-2 col-sm-3 col-sm-offset-0">
 								<input type="text" class="form-control img-responsive"
-									name="yzm" value="" id="yzm" onblur="checkValidate()" />
+									name="" value="" id="yzm" onblur="checkValidate()" />
 							</div>
 							<div
-								class="col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-0 img-responsive">
-								<a href="javascript:changeImg()"><img src="number.jpg"
+								class="col-md-1 col-md-offset-0 col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-0 img-responsive">
+								<a href="javascript:changeImg()"><img src=""
 									id="vf"></a>
 							</div>
 							<div
